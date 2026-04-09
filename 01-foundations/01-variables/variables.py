@@ -20,3 +20,10 @@ perimeter = 2 * PI * roof
 circle_area = PI * roof * roof
 
 print(f"Un cercle de rayon {roof} cm a pour:\n\tPérimètre: {perimeter}cm\n\tAire: {circle_area}cm2")
+
+# Reassigner une variable
+chat = "Michou"
+print(f"Chat avant: {chat}\n")
+
+chat = "Bunny"
+print(f"Chat après: {chat}\n")
