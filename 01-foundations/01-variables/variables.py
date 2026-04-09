@@ -27,3 +27,11 @@ print(f"Chat avant: {chat}\n")
 
 chat = "Bunny"
 print(f"Chat après: {chat}\n")
+
+# Casting ou Conversion de type
+num = "10"
+num = int(num) # Transformer un chaine valide en nombre entier
+
+calculus = str(num * 20)
+
+print("Num x 20 = " + calculus)
