@@ -7,3 +7,11 @@ animal = 'Dog'
 
 print("Name:", name)
 print("Animal:", animal)
+
+# Strings are Arrays of unicode characters
+brand = "Coca Cola"
+
+print(f"First character: {brand[0]}")
+print(f'Third character: {brand[2]}')
+print(f"Last character: {brand[-1]}")
+
