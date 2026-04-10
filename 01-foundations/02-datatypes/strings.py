@@ -15,3 +15,12 @@ print(f"First character: {brand[0]}")
 print(f'Third character: {brand[2]}')
 print(f"Last character: {brand[-1]}")
 
+# Looping through a string
+fruit = "Pineapple"
+
+for character in fruit:
+    print(character)
+
+# Length of a string
+greeting = "Hello everyone!"
+print(greeting, f", length: {len(greeting)}")
