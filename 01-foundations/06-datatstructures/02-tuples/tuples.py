@@ -63,3 +63,15 @@ def remove_item(items: tuple, item) -> tuple:
 
 removed_fruit = input("Name of fruit to remove: ")
 print(remove_item(fruits, removed_fruit))
+
+# Unpack a tuple
+names = ("Maria", "Julie", "Anne")
+(maria, julie, anne) = names
+print(maria, julie, anne)
+
+# use asterisk
+apple, *other_fruits, mango = fruits[:]
+
+print("apple => ", apple)
+print("other fruits =>", other_fruits)
+print("mango =>", mango)
