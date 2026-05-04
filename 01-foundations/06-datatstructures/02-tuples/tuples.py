@@ -30,3 +30,36 @@ if "apple" in fruits:
     print("Yes, 'apple' is in the fruits tuple")
 else:
     print("No 'apple' in the fruits tuple")
+
+# Update item in tuple
+fruits_list = list(fruits)
+fruits_list[0] = "Avocado"
+fruits_list = tuple(fruits_list)
+print("New fruits:", fruits_list)
+
+# Add items to a tuple
+def add_item(items, item) -> tuple:
+    items_list = list(items)
+    items_list.append(item)
+    return tuple(items_list)
+
+fruit = input('Add a fruit:')
+
+if fruit:
+    fruits = add_item(fruits, fruit)
+    print("New fruits:", fruits)
+
+# Remove items
+def remove_item(items: tuple, item) -> tuple:
+    items_list = list(items)
+
+    if item in items_list:
+        items_list.remove(item)
+        print(f"'{item}' removed with success")
+    else:
+        print(f"'{item}' not in collection")
+    
+    return tuple(items_list)
+
+removed_fruit = input("Name of fruit to remove: ")
+print(remove_item(fruits, removed_fruit))
