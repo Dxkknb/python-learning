@@ -32,3 +32,20 @@ if name_2 is None:
     print("No 'model' in person data")
 else:
     print('New name:', name_2)
+
+# Get dictionnary keys and values 
+keys = person.keys()
+
+for k in keys:
+    print(f"{k} => {person[k]}") 
+
+values = person.values()
+print(values)
+
+items = person.items()
+
+for k, v in items:
+    if k == "salary":
+        print(f"{k}: ${v}")
+    else:
+        print(f"{k}: ${v}")
