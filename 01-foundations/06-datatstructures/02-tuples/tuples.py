@@ -75,3 +75,12 @@ apple, *other_fruits, mango = fruits[:]
 print("apple => ", apple)
 print("other fruits =>", other_fruits)
 print("mango =>", mango)
+
+# Loop through a tuple
+
+for name in names:
+    print(name)
+
+for i in range(len(names)):
+    cur_name = names[i]
+    print(f"{i} => {cur_name}")
