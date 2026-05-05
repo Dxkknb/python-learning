@@ -49,3 +49,7 @@ for k, v in items:
         print(f"{k}: ${v}")
     else:
         print(f"{k}: ${v}")
+
+# Set a dictionary
+person['city'] = "Yamoussoukro"
+print("City updated:", person)
