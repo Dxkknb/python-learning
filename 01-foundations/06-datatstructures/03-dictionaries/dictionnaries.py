@@ -53,3 +53,7 @@ for k, v in items:
 # Set a dictionary
 person['city'] = "Yamoussoukro"
 print("City updated:", person)
+
+# Remove an item
+person.pop('city')
+print("After remove city:", person)
