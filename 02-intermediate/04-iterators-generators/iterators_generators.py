@@ -49,3 +49,32 @@ fruits = GenericIterator(['Mango', 'Papaya'])
 
 for fruit in fruits:
     print(fruit)
+
+"""
+Classic Iterators
+"""
+
+# List Iterator
+class ListIterator:
+    def __init__(self, sequence):
+        self.sequence = sequence
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index >= len(self.sequence):
+            raise StopIteration
+
+        value = self.sequence[self.index]
+        self.index += 1
+
+        return value
+
+numbers = [10, 20, 30]
+
+iterator = ListIterator(numbers)
+
+for num in iterator:
+    print(num)
