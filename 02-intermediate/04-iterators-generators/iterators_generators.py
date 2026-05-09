@@ -1,6 +1,7 @@
 """
 Iterators and Generators
 """
+import time
 
 # Iterator
 s = 'abc'
@@ -161,3 +162,21 @@ class EnumerateIterator:
 
 for i, value in EnumerateIterator(['a', 'b', 'c'], start=1):
     print(f"{i} => {value}")
+
+# Generators
+
+def get_items(items: dict):
+    for _key, _value in items.items():
+        yield _key, _value
+
+items_gen = get_items({'Bob': 25, 'John': 30, 'Doe': 40, 'Julie': 17})
+items = []
+
+while True:
+    try:
+        items.append(next(items_gen))
+        print(items)
+    except StopIteration:
+        print("End of data fetching...")
+        break
+    time.sleep(2)
