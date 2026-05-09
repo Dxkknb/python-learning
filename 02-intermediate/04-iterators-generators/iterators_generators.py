@@ -102,3 +102,62 @@ names = ('Annie', 'Julie', 'Jack', 'John')
 
 for name in TupleIterator(names):
     print(name)
+
+# Range Iterator
+
+class RangeIterator:
+    def __init__(self, start: int, stop: int | None = None, step: int = 1) -> None:
+        if stop is None:
+            start, stop = 0, start
+
+        self.current = start
+        self.stop = stop
+        self.step = step
+
+    def __iter__(self) -> "RangeIterator":
+        return self
+
+    def __next__(self):
+        if self.step > 0 and self.current >= self.stop:
+            raise StopIteration
+
+        if self.step < 0 and self.current <= self.stop:
+            raise StopIteration
+
+        value = self.current
+        self.current += self.step
+
+        return value
+
+
+print("Range Iterator:")
+for i in RangeIterator(10):
+    print(i)
+
+
+# Enumerate Iterator
+from typing import Iterable, Any
+
+class EnumerateIterator:
+    def __init__(self, iterable, start: int=0):
+        self.iterable = iterable
+        self.index = start
+        self.position = 0
+
+    def __iter__(self) -> "EnumerateIterator":
+        return self
+
+    def __next__(self):
+        if self.index >= len(list(self.iterable)):
+            raise StopIteration
+
+        result = (self.index, self.iterable[self.position])
+
+        self.index += 1
+        self.position += 1
+
+        return result
+
+
+for i, value in EnumerateIterator(['a', 'b', 'c'], start=1):
+    print(f"{i} => {value}")
